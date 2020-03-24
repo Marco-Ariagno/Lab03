@@ -78,7 +78,7 @@
             </HBox>
             <HBox alignment="TOP_RIGHT">
                <children>
-                  <Text fx:id="txtNumeroParoleSbaglaite" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="123.99992752075195">
+                  <Text fx:id="txtNumeroParoleSbaglaite" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="109.99992728233337">
                      <HBox.margin>
                         <Insets right="20.0" top="5.0" />
                      </HBox.margin>
@@ -94,7 +94,7 @@
       </VBox>
    </center>
    <bottom>
-      <Text fx:id="txtTempo" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.13669395446777" BorderPane.alignment="TOP_LEFT">
+      <Text fx:id="txtTempo" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="218.80338096618652" BorderPane.alignment="TOP_LEFT">
          <BorderPane.margin>
             <Insets bottom="10.0" left="20.0" />
          </BorderPane.margin>

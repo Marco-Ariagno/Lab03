@@ -21,10 +21,8 @@ public class Dictionary {
 		for (String s : digitate) {
 			paroleDigitate.add(s);
 			boolean corretta = false;
-			for (String diz : paroleDizionario) {
-				if (diz.equals(s)) {
-					corretta = true;
-				}
+			if(paroleDizionario.contains(s)) {
+				corretta=true;
 			}
 			if (corretta == false) {
 				errate.add(s);

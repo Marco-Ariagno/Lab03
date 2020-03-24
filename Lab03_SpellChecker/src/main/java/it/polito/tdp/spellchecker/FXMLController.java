@@ -64,12 +64,16 @@ public class FXMLController {
 
     @FXML
     void doSpellCheck(ActionEvent event) {
+    	long start=System.nanoTime();
     	List<String> sbagliate;
     	dizionario.scaricoIlDizionario(choiceBox.getValue());
     	sbagliate=dizionario.suddividoTestoInParoleEdEffettuoControllo(txtTesto.getText());
     	for(String s:sbagliate) {
     		txtParoleSbagliate.appendText(s+"\n");
     	}
+    	txtNumeroParoleSbaglaite.setText("Ci sono "+Integer.toString(sbagliate.size())+" errori");
+    	long end=System.nanoTime();
+    	txtTempo.setText("Il tempo impiegato e: "+Long.toString(end-start));
     }
 
     @FXML
