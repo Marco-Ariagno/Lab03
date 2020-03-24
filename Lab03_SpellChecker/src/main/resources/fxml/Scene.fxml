@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.spellchecker.FXMLController">
    <top>
       <Label text="Lab03_SpellChecker" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -13,4 +18,86 @@
          </BorderPane.margin>
       </Label>
    </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Choose the language:">
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="choiceBox" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <TextArea fx:id="txtTesto" prefHeight="150.0" prefWidth="379.0">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </TextArea>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <Button fx:id="btnSpellCheck" mnemonicParsing="false" onAction="#doSpellCheck" text="Spell Check">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wrong words">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <TextArea fx:id="txtParoleSbagliate" prefHeight="150.0" prefWidth="379.0">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="5.0" />
+                     </HBox.margin>
+                  </TextArea>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <Text fx:id="txtNumeroParoleSbaglaite" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="123.99992752075195">
+                     <HBox.margin>
+                        <Insets right="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Button fx:id="btnClearText" mnemonicParsing="false" onAction="#doClearText" text="Clear text">
+                     <HBox.margin>
+                        <Insets right="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Text fx:id="txtTempo" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.13669395446777" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="20.0" />
+         </BorderPane.margin>
+      </Text>
+   </bottom>
 </BorderPane>
