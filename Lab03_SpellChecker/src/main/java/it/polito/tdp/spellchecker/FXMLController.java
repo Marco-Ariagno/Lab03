@@ -67,7 +67,7 @@ public class FXMLController {
     	long start=System.nanoTime();
     	List<String> sbagliate;
     	dizionario.scaricoIlDizionario(choiceBox.getValue());
-    	sbagliate=dizionario.suddividoTestoInParoleEdEffettuoControllo(txtTesto.getText());
+    	sbagliate=dizionario.suddividoTestoInParoleEdEffettuoControlloDicotomico(txtTesto.getText());
     	for(String s:sbagliate) {
     		txtParoleSbagliate.appendText(s+"\n");
     	}
